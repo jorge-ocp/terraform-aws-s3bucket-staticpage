@@ -15,3 +15,8 @@ output "website_bucket_domain" {
     value = module.website_s3_bucket.domain
   
 }
+
+output "website_index_url" {
+  description = "URL to check the index file"
+  value = "https://${module.website_s3_bucket.name}.${module.website_s3_bucket.domain}/index.html"
+}
